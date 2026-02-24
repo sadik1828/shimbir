@@ -32,18 +32,18 @@ export const services = [
   },
   {
     _id: '3',
-    name: 'Industrial Construction',
-    description: 'Factories, plants, and large-scale facilities',
-    longDescription: 'Specializing in complex industrial projects, we deliver robust and efficient facilities designed for heavy-duty operations. Our team has extensive experience in industrial construction.',
-    icon: '🏭',
+    name: 'Road Construction',
+    description: 'Highways, streets, and infrastructure development',
+    longDescription: 'Our road construction division specializes in building and maintaining critical transportation infrastructure. From highways to local streets, we deliver durable, safe, and efficient road solutions that connect communities and support economic growth.',
+    icon: '🛣️',
     features: [
-      'Manufacturing Plants',
-      'Distribution Centers',
-      'Industrial Facilities',
-      'Heavy Civil Construction',
-      'Specialized Infrastructure'
+      'Highway Construction',
+      'Street Paving',
+      'Road Maintenance',
+      'Bridge Construction',
+      'Traffic Management Systems'
     ],
-    image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800'
+    image: 'https://images.unsplash.com/photo-1590644365607-1c5a081f7f3f?w=800'
   },
   {
     _id: '4',
@@ -115,7 +115,7 @@ export const projects = [
     featured: false
   },
   {
-    _id: '5',
+    _id: '4',
     title: 'Manufacturing Plant',
     description: 'State-of-the-art manufacturing facility with advanced systems',
     location: 'Houston, TX',
@@ -136,25 +136,25 @@ export const projects = [
 export const testimonials = [
   {
     _id: '1',
-    clientName: 'Michael Rodriguez',
-    projectType: 'Luxury Home Construction',
-    content: 'Shimbir Group exceeded our expectations in every way. Their attention to detail and commitment to quality made our dream home a reality.',
+    clientName: 'Cabdi Maxamed',
+    projectType: 'Dhismo Guri Raashin',
+    content: 'Shimbir Group waxay ka sareeyeen rajadeennii oo dhan. Fiirogaarkooda faahfaahinta iyo go\'aankooda tayada ayaa gurigeennii riyada noo noqday mid dhab ah. Kooxdu aad bay u xirfad badnaayeen, waqtigayna way ku soo dhameeyeen.',
     rating: 5,
     image: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
     _id: '2',
-    clientName: 'Sarah Johnson',
-    projectType: 'Office Renovation',
-    content: 'Working with Shimbir Group on our office renovation was a seamless experience. They understood our vision and executed it perfectly.',
+    clientName: 'Hodan Cali',
+    projectType: 'Cusbooneysiin Xafiis',
+    content: 'Inaan la shaqeeyo Shimbir Group cusbooneysiinta xafiiskeennu waxay ahayd mid aan kala go\' lahayn. Waxay fahmeen aragtideennii si sax ahna u fuliyeen. Meesha shaqadu hadda waa mid hawlkarnimo leh, qurux badan, oo sax ah.',
     rating: 5,
     image: 'https://randomuser.me/api/portraits/women/44.jpg'
   },
   {
     _id: '3',
-    clientName: 'David Chen',
-    projectType: 'Commercial Building',
-    content: 'Professional, reliable, and highly skilled. Shimbir Group delivered our commercial building project ahead of schedule and under budget.',
+    clientName: 'Maxamed Cabdullaahi',
+    projectType: 'Dhismo Ganacsi',
+    content: 'Xirfad leh, la isku halayn karo, oo xirfad sare leh. Shimbir Group waxay dhismahayaga ganacsi ku soo dhameeyeen waqtigii ka horreeyay iyo miisaaniyadda ka hooseysa. Maamulka mashruucoodu aad buu u fiicnaa intii uu socday howsha oo dhan.',
     rating: 5,
     image: 'https://randomuser.me/api/portraits/men/67.jpg'
   }
@@ -203,4 +203,13 @@ export const blogPosts = [
   }
 ];
 
-export default { services, projects, testimonials, teamMembers, blogPosts };
+// ✅ FIX: Assign to variable before exporting
+const mockData = {
+  services,
+  projects,
+  testimonials,
+  teamMembers,
+  blogPosts
+};
+
+export default mockData;

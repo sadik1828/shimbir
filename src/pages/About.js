@@ -2,7 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { teamMembers, testimonials, projects } from './mockData';
+// ✅ FIX: Removed unused 'projects' import
+import { teamMembers, testimonials } from './mockData';
 
 const About = () => {
   const containerVariants = {

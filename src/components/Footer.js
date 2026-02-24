@@ -40,6 +40,7 @@ const Footer = () => {
                   href="#"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#dd6b20] transition-colors"
                   aria-label={social.name}
+                  role="link"
                 >
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d={social.icon} />
@@ -83,10 +84,14 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Residential Construction', 'Commercial Construction', 'Road Construction', 'Design & Build'].map((service, index) => (
                 <li key={index}>
-                  <a href="/services" className="text-gray-400 hover:text-[#dd6b20] transition flex items-center group">
+                  {/* ✅ FIX: Use valid href or button */}
+                  <Link 
+                    to="/services" 
+                    className="text-gray-400 hover:text-[#dd6b20] transition flex items-center group"
+                  >
                     <span className="w-0 h-0.5 bg-[#dd6b20] mr-0 group-hover:w-4 group-hover:mr-2 transition-all"></span>
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -139,8 +144,9 @@ const Footer = () => {
               &copy; {currentYear} Shimbir Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition">Privacy Policy</Link>
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition">Terms of Service</Link>
+              {/* ✅ FIX: Use valid href */}
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition">Terms of Service</Link>
             </div>
           </div>
         </div>
