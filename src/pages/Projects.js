@@ -6,11 +6,10 @@ import { projects } from './mockData';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
-  const [hoveredProject, setHoveredProject] = useState(null);
-
+  
   // Get unique categories from projects
   const categories = ['All', ...new Set(projects.map(p => p.category))];
-
+  
   // Filter projects based on selected category
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -104,8 +103,6 @@ const Projects = () => {
                   variants={itemVariants}
                   layout
                   className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-                  onMouseEnter={() => setHoveredProject(project._id)}
-                  onMouseLeave={() => setHoveredProject(null)}
                 >
                   {/* Project Image */}
                   <div className="relative h-72 overflow-hidden">
